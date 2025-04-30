@@ -73,10 +73,10 @@ https://x.com/i/oauth2/authorize?response_type=code&client_id=VVdyZ0t4WFFRMjBlMz
 
 After authenticating, you will receive the following message:
 
-````
+```
 Authenticated! Here's your access token:
 apx-613f64069424d88c6fbf2e75c0c80a34
-```|
+```
 
 ## Features
 
@@ -105,4 +105,3 @@ Here's everything `@virtuals-protocol/game-twitter-node` can do:
 - Declare a read-only client - you will only see the methods associated with read-only endpoints
 
 And last but not least, fully powered by native `Promise`s.
-````

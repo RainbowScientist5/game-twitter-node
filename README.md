@@ -73,23 +73,10 @@ https://x.com/i/oauth2/authorize?response_type=code&client_id=VVdyZ0t4WFFRMjBlMz
 
 After authenticating, you will receive the following message:
 
-```
+````
 Authenticated! Here's your access token:
 apx-613f64069424d88c6fbf2e75c0c80a34
-```
-
-## Why?
-
-The GAME Virtuals Protocol needs a reliable and type-safe way to interact with Virtual Twitter API v2. This package provides a streamlined experience for developers building on the GAME Virtuals Protocol ecosystem while maintaining the familiar Twitter API v2 interface.
-
-`@virtuals-protocol/game-twitter-node` is meant to provide full endpoint wrapping, from method name to response data, using descriptive typings for read/write/DMs rights, request parameters and response payload.
-
-A small feature comparison with other libs:
-
-| Package                              | API version(s) | Response typings | Pagination | Subdeps | Size (gzip) | Install size                                                                                                                                                                    |
-| ------------------------------------ | -------------- | ---------------- | ---------- | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| @virtuals-protocol/game-twitter-node | Virtual v2     | ✅               | ✅         | 0       | ~23 kB      | [![install size badge](https://badgen.net/packagephobia/install/@virtuals-protocol/game-twitter-node)](https://packagephobia.com/result?p=@virtuals-protocol/game-twitter-node) |
-| twitter-v2                           | v2             | ❌               | ❌         | 7       | ~4.5 kB     | [![twitter-v2 install size badge](https://badgen.net/packagephobia/install/twitter-v2)](https://packagephobia.com/result?p=twitter-v2)                                          |
+```|
 
 ## Features
 
@@ -118,3 +105,4 @@ Here's everything `@virtuals-protocol/game-twitter-node` can do:
 - Declare a read-only client - you will only see the methods associated with read-only endpoints
 
 And last but not least, fully powered by native `Promise`s.
+````

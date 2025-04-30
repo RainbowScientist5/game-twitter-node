@@ -1,5 +1,5 @@
 {
-  "name": "@virtuals-protocol/twitter-api-v2",
+  "name": "@virtuals-protocol/game-twitter-node",
   "version": "0.1.0",
   "description": "Strongly typed, full-featured, light, versatile yet powerful Virtual Twitter API v2 client for Node.js. Forked from twitter-api-v2.",
   "main": "dist/cjs/index.js",

@@ -3,7 +3,7 @@
 import axios from "axios";
 import { Command } from "commander";
 import * as http from "http";
-import open = require("open");
+import open from "open";
 
 const client = axios.create({
   baseURL: "https://twitter.game.virtuals.io/accounts",

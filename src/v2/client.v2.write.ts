@@ -178,9 +178,8 @@ export default class TwitterApiv2ReadWrite extends TwitterApiv2ReadOnly {
     chunkSize: number = 1024 * 1024
   ): Promise<string> {
     if (this._requestMaker.gameTwitterAccessToken) {
-      const blob = new Blob([media]);
+      const blob = new Blob([media], { type: options.media_type });
       const formData = new FormData();
-
       formData.append("file", blob);
       const response = await this.postFormDataGame(`media/upload`, formData);
       return response["media_id"];

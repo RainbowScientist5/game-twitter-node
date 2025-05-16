@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
+    "dev": "nodemon --watch src --ext ts --exec \"npm run build\"",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
     "build-doc": "typedoc src/index.ts --out tsdocs",
@@ -60,7 +61,7 @@
     "commander": "^13.1.0"
   },
   "bin": {
-    "game-twitter-plugin": "./dist/esm/bin.js"
+    "game-twitter-node": "./dist/esm/bin.js"
   },
   "bugs": {
     "url": "https://github.com/plhery/node-twitter-api/issues"

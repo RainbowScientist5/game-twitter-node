@@ -1,36 +1,40 @@
 #!/usr/bin/env node
 
-import axios from "axios";
 import { Command } from "commander";
 import * as http from "http";
 import open from "open";
 
-const client = axios.create({
-  baseURL: "https://twitter.game.virtuals.io/accounts",
-});
+const BASE_URL = "https://twitter.game.virtuals.io/accounts";
 
 const getLoginUrl = async (apiKey: string) => {
-  const response = await client.get<{
-    url: string;
-  }>("/auth", {
+  const response = await fetch(`${BASE_URL}/auth`, {
     headers: {
       "x-api-key": apiKey,
     },
   });
-  return response.data.url;
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+
+  const data = await response.json();
+
+  return data.url;
 };
 
 const verify = async (code: string, state: string) => {
-  const response = await client.get<{
-    token: string;
-  }>("/verify", {
-    params: {
-      code,
-      state,
-    },
-  });
+  const response = await fetch(
+    `${BASE_URL}/verify?code=${code}&state=${state}`
+  );
 
-  return response.data.token;
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+
+  const data = await response.json();
+  return data.token;
 };
 
 const program = new Command();
